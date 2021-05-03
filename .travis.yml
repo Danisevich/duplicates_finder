@@ -1,13 +1,8 @@
 language: java
-
 jdk:
   - openjdk15
 
 sudo: false
-
-env:
-  global:
-    - CODECOV_TOKEN="a9f03a34-9919-454d-aac1-8fdaa1bcc9cf"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
@@ -15,6 +10,9 @@ after_success:
 notifications:
   email:
     recipients:
-      -danisevich.e@gmail.com
+      -a937va@gmail.com
     on_success: never # default: change
     on_failure: always # default: always
+env:
+  global:
+    - CODECOV_TOKEN="a9f03a34-9919-454d-aac1-8fdaa1bcc9cf"
