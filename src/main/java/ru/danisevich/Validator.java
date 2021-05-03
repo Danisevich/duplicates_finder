@@ -12,7 +12,7 @@ public class Validator {
         return values.get(key);
     }
 
-    public void parse(String[] args) {
+    private void parse(String[] args) {
         if (args.length == 0) {
             throw new IllegalArgumentException("Root folder is null. Usage java -jar duplicates_finder.jar -f=ROOT_FOLDER.");
         }
