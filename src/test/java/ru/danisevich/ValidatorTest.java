@@ -14,15 +14,6 @@ public class ValidatorTest {
     @Rule
     public TemporaryFolder folder = new TemporaryFolder();
 
-    @Test
-    public void whenValidParameters() {
-        String[] args = new String[]{"-f=c:/"};
-        Validator validator = new Validator();
-        validator.valid(args);
-        String string = validator.get("-f");
-        assertEquals(string, "c:/");
-    }
-
     @Test (expected = IllegalArgumentException.class)
     public void whenInvalidNumberParameters() {
         String[] args = new String[0];
